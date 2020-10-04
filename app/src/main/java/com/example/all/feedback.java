@@ -38,7 +38,7 @@ public class feedback extends AppCompatActivity {
         feedReviews = findViewById(R.id.autoCompleteTextView);
         ratingBar = findViewById(R.id.ratingBar);
         ratingBar1 = findViewById(R.id.ratingBar3);
-
+        //showrating = findViewById(R.id.ratingBar3);
         Add = findViewById(R.id.buttonPay);
         userfeedback = new UserFeedback();
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
@@ -104,3 +104,4 @@ public class feedback extends AppCompatActivity {
 
 
     }}
+//}
