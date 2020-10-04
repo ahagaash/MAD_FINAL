@@ -41,6 +41,7 @@ public class DriverDetails extends AppCompatActivity {
 
         driver = new Driver();
 
+//Add drivers
         butAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,7 +72,7 @@ public class DriverDetails extends AppCompatActivity {
                 }
             }
         });
-
+//Show driver
         butShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,7 +97,7 @@ public class DriverDetails extends AppCompatActivity {
                 });
             }
         });
-
+//update driver
         butUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
