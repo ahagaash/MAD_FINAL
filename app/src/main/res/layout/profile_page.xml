@@ -9,58 +9,53 @@
     android:onClick="Feedbackpage"
     tools:context=".ProfilePage">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076"
-        tools:src="@tools:sample/avatars" />
-
     <Button
         android:id="@+id/logoutbtn"
         android:layout_width="93dp"
         android:layout_height="44dp"
+        android:background="#a3c2c2"
         android:text="Log out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308" />
+        app:layout_constraintVertical_bias="0.381" />
 
     <Button
-        android:layout_width="390dp"
+        android:id="@+id/button18"
+        android:layout_width="409dp"
         android:layout_height="70dp"
+        android:background="#a3c2c2"
         android:drawableLeft="@drawable/iconzprofile"
         android:onClick="ordercomfirmation"
         android:text="Order comfirmation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.546" />
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="397dp"
+        android:layout_width="409dp"
         android:layout_height="63dp"
+        android:background="#a3c2c2"
         android:drawableLeft="@drawable/iconpay"
         android:onClick="paymentHistory"
         android:text="Payment Details"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.63" />
+        app:layout_constraintVertical_bias="0.682" />
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="395dp"
-        android:layout_height="58dp"
+        android:layout_width="409dp"
+        android:layout_height="60dp"
+        android:background="#a3c2c2"
         android:drawableLeft="@drawable/iconfeedb"
         android:onClick="Logout"
         android:text="Feedbackdetails"
@@ -69,6 +64,17 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754" />
+        app:layout_constraintVertical_bias="0.806" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="146dp"
+        android:layout_height="159dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073"
+        app:srcCompat="@drawable/personiconpro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
