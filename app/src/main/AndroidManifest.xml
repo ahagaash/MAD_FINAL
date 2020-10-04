@@ -32,24 +32,31 @@
 
         </activity>
         <activity android:name=".ProfilePage">
+
+
+        </activity>
+        <activity android:name=".AdminLoginPage">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+
         </activity>
-        <activity android:name=".AdminLoginPage"></activity>
-        <activity android:name=".AdminHome"></activity>
+        <activity android:name=".AdminHome">
+
+
+
+
+        </activity>
         <activity android:name=".AssignOrder" />
         <activity android:name=".feedbackUpdate" />
         <activity android:name=".feedback" >
 
-            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+
 
         </activity>
         <activity android:name=".Feed" />
