@@ -11,8 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PopActivity"  android:theme="@style/AppTheme.PopMe"></activity>
-        <activity android:name=".CartActivity"></activity>
+        <activity android:name=".UpdateDeleteSignup">
+
+
+
+
+        </activity>
+        <activity
+            android:name=".PopActivity"
+            android:theme="@style/AppTheme.PopMe" />
+        <activity android:name=".CartActivity" />
         <activity
             android:name=".Profile"
             android:label="@string/title_activity_profile"
@@ -30,13 +38,6 @@
         <activity android:name=".Login" />
         <activity android:name=".FirstPage">
 
-        </activity>
-        <activity android:name=".ProfilePage">
-
-
-        </activity>
-        <activity android:name=".AdminLoginPage">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,32 +46,27 @@
 
 
         </activity>
-        <activity android:name=".AdminHome">
-
+        <activity android:name=".ProfilePage">
 
 
 
         </activity>
+        <activity android:name=".AdminLoginPage"></activity>
+        <activity android:name=".AdminHome"></activity>
         <activity android:name=".AssignOrder" />
         <activity android:name=".feedbackUpdate" />
-        <activity android:name=".feedback" >
-
-
-
-
-        </activity>
+        <activity android:name=".feedback"></activity>
         <activity android:name=".Feed" />
         <activity android:name=".DriverDetails" />
         <activity android:name=".PaySuccess" />
-        <activity android:name=".Paydlt"></activity>
-        <activity android:name=".Payment"></activity>
+        <activity android:name=".Paydlt" />
+        <activity android:name=".Payment" />
         <activity android:name=".help" />
         <activity android:name=".ContactUs" />
         <activity android:name=".Hom" />
         <activity android:name=".EditResponse" />
         <activity android:name=".Question" />
         <activity android:name=".GooglePlay" />
-
     </application>
 
 </manifest>

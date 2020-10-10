@@ -36,4 +36,13 @@ public class ProfilePage extends AppCompatActivity {
 
 
     }
+
+    public void Editprofile(View view){
+        Intent intent= new Intent(ProfilePage.this, UpdateDeleteSignup.class);
+        startActivity(intent);
+
+    }
+
+
+
 }

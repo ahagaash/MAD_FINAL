@@ -99,6 +99,10 @@ public class Login extends AppCompatActivity {
     public void reg (View v){
         //display alert(popup) on screen
         Toast.makeText(this,"Make your profile",Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(Login.this, Signup.class);
+        startActivity(intent);
+
+
     }
 
 }
