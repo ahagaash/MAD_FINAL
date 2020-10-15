@@ -8,6 +8,35 @@ public class UserFeedback {
     Integer mobile;
     String email;
     String reviews;
+    float ratingBar;
+
+    public float getTotal() {
+        return total;
+    }
+
+    public void setTotal(float total) {
+        this.total = total;
+    }
+
+    public float getAverage() {
+        return average;
+    }
+
+    public void setAverage(float average) {
+        this.average = average;
+    }
+
+    float ratingBar1;
+    float total;
+    float average;
+
+    public float getRatingBar1() {
+        return ratingBar1;
+    }
+
+    public void setRatingBar1(float ratingBar1) {
+        this.ratingBar1 = ratingBar1;
+    }
 
     public float getRatingBar() {
         return ratingBar;
@@ -17,16 +46,6 @@ public class UserFeedback {
         this.ratingBar = ratingBar;
     }
 
-    public String getTxtRatingValue() {
-        return txtRatingValue;
-    }
-
-    public void setTxtRatingValue(String txtRatingValue) {
-        this.txtRatingValue = txtRatingValue;
-    }
-
-    float ratingBar;
-   String txtRatingValue;
 
     public String getFullname() {
         return fullname;

@@ -27,6 +27,7 @@ public class feedback extends AppCompatActivity {
     RatingBar ratingBar1;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +39,17 @@ public class feedback extends AppCompatActivity {
         feedReviews = findViewById(R.id.autoCompleteTextView);
         ratingBar = findViewById(R.id.ratingBar);
         ratingBar1 = findViewById(R.id.ratingBar3);
+
+
+float total;
+
+        float a= ratingBar.getRating();
+        float b= ratingBar1.getRating();
+
+        total=a+b;
+        float average = total / 2;
         //showrating = findViewById(R.id.ratingBar3);
+
         Add = findViewById(R.id.buttonPay);
         userfeedback = new UserFeedback();
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
@@ -58,6 +69,10 @@ public class feedback extends AppCompatActivity {
         Add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                ratingBar.getRating();
+                ratingBar1.getRating();
+
                 reference = FirebaseDatabase.getInstance().getReference().child("FeedbackTable");
 
 
@@ -76,6 +91,8 @@ public class feedback extends AppCompatActivity {
                         userfeedback.setMobile(Integer.parseInt(feedMobile.getText().toString().trim()));
                         userfeedback.setEmail(feedEmail.getText().toString().trim());
                         userfeedback.setReviews(feedReviews.getText().toString().trim());
+                        userfeedback.setRatingBar(ratingBar.getRating());
+                        userfeedback.setRatingBar1(ratingBar1.getRating());
 
                         reference.push().setValue(userfeedback);
                         reference.child("userfeedback1").setValue(userfeedback);
@@ -97,6 +114,7 @@ public class feedback extends AppCompatActivity {
                 feedMobile.setText("");
                 feedEmail.setText("");
                 feedReviews.setText("");
+
 
             }
 

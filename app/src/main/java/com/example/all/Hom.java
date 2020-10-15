@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class Hom extends AppCompatActivity {
     private Button b1;
-    private Button b2;
+    private Button bf;
     private Button b3;
     private Button b4;
     @Override
@@ -21,7 +21,7 @@ public class Hom extends AppCompatActivity {
 
 
             b1 = (Button) findViewById(R.id.button4);
-            b2 = (Button) findViewById(R.id.button5);
+            bf = (Button) findViewById(R.id.button5);
             b3 = (Button) findViewById(R.id.button2);
             b4 = (Button) findViewById(R.id.button3);
 
@@ -37,7 +37,7 @@ public class Hom extends AppCompatActivity {
                 }
             });
 
-            b2.setOnClickListener(new View.OnClickListener() {
+            bf.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view1) {
                     openActivity3();

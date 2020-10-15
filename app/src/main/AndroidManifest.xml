@@ -55,8 +55,12 @@
         <activity android:name=".AdminHome"></activity>
         <activity android:name=".AssignOrder" />
         <activity android:name=".feedbackUpdate" />
-        <activity android:name=".feedback"></activity>
-        <activity android:name=".Feed" />
+        <activity android:name=".feedback">
+
+        </activity>
+        <activity android:name=".Feed" >
+
+        </activity>
         <activity android:name=".DriverDetails" />
         <activity android:name=".PaySuccess" />
         <activity android:name=".Paydlt" />

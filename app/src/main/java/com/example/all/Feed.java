@@ -20,7 +20,7 @@ public class Feed extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feedback);
+        setContentView(R.layout.activity_feed);
         b1 = (Button) findViewById(R.id.button4);
         b2 = (Button) findViewById(R.id.button5);
         b3 = (Button) findViewById(R.id.button6);
@@ -33,8 +33,8 @@ public class Feed extends AppCompatActivity {
             }
 
             public void openActivity2() {
-                Intent intent = new Intent(Feed.this, help.class);
-                startActivity(intent);
+                Intent i = new Intent(Feed.this, help.class);
+                startActivity(i);
             }
         });
 

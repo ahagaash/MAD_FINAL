@@ -26,7 +26,7 @@ public class ProfilePage extends AppCompatActivity {
     }
 
     public void Feedbackpage(View view) {
-        Intent intent = new Intent(ProfilePage.this, EditResponse.class);
+        Intent intent = new Intent(ProfilePage.this, feedbackUpdate.class);
         startActivity(intent);
     }
 
