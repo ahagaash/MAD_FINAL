@@ -175,15 +175,6 @@
         app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toEndOf="@+id/textView8" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="160dp"
-        android:layout_height="42dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="150dp"
@@ -216,10 +207,10 @@
         android:layout_height="37dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintHorizontal_bias="0.029"
         app:layout_constraintStart_toEndOf="@+id/radioGroup"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.253"
+        app:layout_constraintVertical_bias="0.269"
         app:srcCompat="@drawable/visa" />
 
     <ImageView
@@ -229,7 +220,7 @@
         android:layout_marginTop="4dp"
         app:layout_constraintBottom_toTopOf="@+id/hold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toEndOf="@+id/radioGroup"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.0"

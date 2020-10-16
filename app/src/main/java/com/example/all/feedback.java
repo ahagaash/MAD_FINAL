@@ -18,14 +18,15 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class feedback extends AppCompatActivity {
 
-    EditText feedFullaname, feedMobile, feedEmail, feedReviews, rating1, rating2;
+    EditText feedFullaname, feedMobile, feedEmail, feedReviews;
 
     Button Add;
     DatabaseReference reference;
     UserFeedback userfeedback;
     RatingBar ratingBar;
     RatingBar ratingBar1;
-
+     float total;
+     float average;
 
 
     @Override
@@ -41,14 +42,6 @@ public class feedback extends AppCompatActivity {
         ratingBar1 = findViewById(R.id.ratingBar3);
 
 
-float total;
-
-        float a= ratingBar.getRating();
-        float b= ratingBar1.getRating();
-
-        total=a+b;
-        float average = total / 2;
-        //showrating = findViewById(R.id.ratingBar3);
 
         Add = findViewById(R.id.buttonPay);
         userfeedback = new UserFeedback();
@@ -63,6 +56,7 @@ float total;
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
                 Toast.makeText(feedback.this,"Stars:" +(int ) v , Toast.LENGTH_SHORT).show();
             }
+
         });
 
 
@@ -72,6 +66,11 @@ float total;
 
                 ratingBar.getRating();
                 ratingBar1.getRating();
+                total = ratingBar.getRating()+ratingBar1.getRating();
+                average=total/2;
+
+
+
 
                 reference = FirebaseDatabase.getInstance().getReference().child("FeedbackTable");
 
@@ -93,12 +92,16 @@ float total;
                         userfeedback.setReviews(feedReviews.getText().toString().trim());
                         userfeedback.setRatingBar(ratingBar.getRating());
                         userfeedback.setRatingBar1(ratingBar1.getRating());
+                        userfeedback.setTotal(total);
+                        userfeedback.setAverage(average);
+
 
                         reference.push().setValue(userfeedback);
                         reference.child("userfeedback1").setValue(userfeedback);
 
                         Intent i = new Intent(getApplicationContext(), PopActivity.class);
                         startActivity(i);
+                        Toast.makeText(getApplicationContext(),"Succesfully inserted",Toast.LENGTH_SHORT).show();
                         clearControls();
 
 
@@ -114,7 +117,6 @@ float total;
                 feedMobile.setText("");
                 feedEmail.setText("");
                 feedReviews.setText("");
-
 
             }
 

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -18,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 public class feedbackUpdate extends AppCompatActivity {
     EditText feedFullaname, feedMobile, feedEmail, feedReviews;
     Button butUpdate,butDelete;
+
 
     DatabaseReference reference;
     UserFeedback userfeedback;
@@ -32,10 +34,12 @@ public class feedbackUpdate extends AppCompatActivity {
         feedEmail = findViewById(R.id.editTextTextEmailAddress);
         feedReviews = findViewById(R.id.autoCompleteTextView);
 
+
         butUpdate = findViewById(R.id.button9);
         butDelete = findViewById(R.id.button10);
 
         userfeedback = new UserFeedback();
+
 
         reference = FirebaseDatabase.getInstance().getReference().child("FeedbackTable").child("userfeedback1");
 
@@ -47,7 +51,6 @@ public class feedbackUpdate extends AppCompatActivity {
                     feedMobile.setText(dataSnapshot.child("mobile").getValue().toString());
                     feedEmail.setText(dataSnapshot.child("email").getValue().toString());
                     feedReviews.setText(dataSnapshot.child("reviews").getValue().toString());
-
 
                 }
                 else
@@ -64,7 +67,11 @@ public class feedbackUpdate extends AppCompatActivity {
            butUpdate.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View view) {
+
+
+
                    DatabaseReference updRef = FirebaseDatabase.getInstance().getReference().child("FeedbackTable");
+
                    updRef.addListenerForSingleValueEvent(new ValueEventListener() {
                        @Override
                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -75,6 +82,9 @@ public class feedbackUpdate extends AppCompatActivity {
                                    userfeedback.setMobile(Integer.parseInt(feedMobile.getText().toString().trim()));
                                    userfeedback.setEmail(feedEmail.getText().toString().trim());
                                    userfeedback.setReviews(feedReviews.getText().toString().trim());
+
+
+
 
                                    reference = FirebaseDatabase.getInstance().getReference().child("FeedbackTable").child("userfeedback1");
                                    reference.setValue(userfeedback);
@@ -88,7 +98,8 @@ public class feedbackUpdate extends AppCompatActivity {
 
                            }
                            else
-                               Toast.makeText(getApplicationContext(),"No source to update",Toast.LENGTH_SHORT).show();
+
+                           Toast.makeText(getApplicationContext(),"No source to update",Toast.LENGTH_SHORT).show();
 
                        }
 
@@ -112,6 +123,8 @@ public class feedbackUpdate extends AppCompatActivity {
                    feedMobile.setText("");
                    feedEmail.setText("");
                    feedReviews.setText("");
+
+
 
                }
            });
