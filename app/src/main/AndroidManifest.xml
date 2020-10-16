@@ -40,7 +40,11 @@
         <activity android:name=".Login" />
         <activity android:name=".FirstPage">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
 
         </activity>
@@ -52,11 +56,7 @@
         <activity android:name=".AdminLoginPage"></activity>
         <activity android:name=".AdminHome">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".AssignOrder" />
         <activity android:name=".feedbackUpdate" />
