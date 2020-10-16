@@ -2,6 +2,7 @@ package com.example.all;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -85,6 +86,7 @@ public class MyAdapter1 extends RecyclerView.Adapter<FoodViewHolder>{
     public int getItemCount() {
         return myFoodList.size();
     }
+
 
     public void filterdList(ArrayList<FoodData> filterList) {
 

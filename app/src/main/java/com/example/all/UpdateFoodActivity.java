@@ -66,7 +66,7 @@ public class UpdateFoodActivity extends AppCompatActivity {
 
 
     public void btnSelectImage(View view) {
-        Intent photoPicker = new Intent(Intent.ACTION_GET_CONTENT);
+        Intent photoPicker = new Intent(Intent.ACTION_PICK);
         photoPicker.setType("image/*");
         startActivityForResult(photoPicker,1);
     }
@@ -113,7 +113,7 @@ public class UpdateFoodActivity extends AppCompatActivity {
     public void uploadRecipe(){
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Food is uploading");
+        progressDialog.setMessage("Food is Updating");
         progressDialog.show();
 
         FoodData foodData = new FoodData(
@@ -129,6 +129,7 @@ public class UpdateFoodActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 Toast.makeText(UpdateFoodActivity.this,"FOOD UPDATED",Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
+                startActivity(new Intent(UpdateFoodActivity.this,MainActivity.class));
                /* startActivity(new Intent(getApplicationContext(),MainActivity.class));*/
 
             }
