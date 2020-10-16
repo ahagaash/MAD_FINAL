@@ -43,6 +43,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
         <activity android:name=".ProfilePage">
 
@@ -52,10 +54,8 @@
         <activity android:name=".AdminLoginPage"></activity>
         <activity android:name=".AdminHome"></activity>
         <activity android:name=".AssignOrder" />
-        <activity android:name=".feedbackUpdate" >   </activity>
+        <activity android:name=".feedbackUpdate" />
         <activity android:name=".feedback">
-
-
 
         </activity>
         <activity android:name=".Feed" >
@@ -63,13 +63,13 @@
         </activity>
         <activity android:name=".DriverDetails" />
         <activity android:name=".PaySuccess" />
-        <activity android:name=".Paydlt" > </activity>
+        <activity android:name=".Paydlt" />
         <activity android:name=".Payment" />
-        <activity android:name=".help" ></activity>
+        <activity android:name=".help" />
         <activity android:name=".ContactUs" />
         <activity android:name=".Hom" />
         <activity android:name=".EditResponse" />
-        <activity android:name=".Question" ></activity>
+        <activity android:name=".Question" />
         <activity android:name=".GooglePlay" />
     </application>
 

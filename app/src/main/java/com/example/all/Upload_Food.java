@@ -57,7 +57,7 @@ public class Upload_Food extends AppCompatActivity {
 
     public void btnSelectImage(View view) {
 
-        Intent photoPicker = new Intent(Intent.ACTION_GET_CONTENT);
+        Intent photoPicker = new Intent(Intent.ACTION_PICK);
         photoPicker.setType("image/*");
         startActivityForResult(photoPicker,1);
     }
@@ -88,6 +88,8 @@ public class Upload_Food extends AppCompatActivity {
         progressDialog.setMessage("Food is uploading");
         progressDialog.show();
 
+
+
         FoodData foodData = new FoodData(
                 txt_name.getText().toString(),
                 txt_description.getText().toString(),
@@ -105,6 +107,7 @@ public class Upload_Food extends AppCompatActivity {
                 if(task.isSuccessful()){
                     Toast.makeText(Upload_Food.this, "Food uploaded", Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
+                    startActivity(new Intent(Upload_Food.this,MainActivity.class));
                     finish();
                 }
             }
