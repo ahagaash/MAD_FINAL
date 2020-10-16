@@ -9,6 +9,7 @@ public class UserFeedback {
     String email;
     String reviews;
     float ratingBar;
+    float ratingBar1;
 
     public float getTotal() {
         return total;
@@ -26,9 +27,9 @@ public class UserFeedback {
         this.average = average;
     }
 
-    float ratingBar1;
     float total;
     float average;
+
 
     public float getRatingBar1() {
         return ratingBar1;
