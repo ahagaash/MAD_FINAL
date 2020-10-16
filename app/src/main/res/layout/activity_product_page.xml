@@ -33,7 +33,7 @@
         android:scrollbars="vertical"></androidx.recyclerview.widget.RecyclerView>
 
     <!--delete this on customer view-->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+   <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -45,7 +45,7 @@
         android:layout_marginBottom="40dp"
         android:backgroundTint="@color/colorPrimary"
         android:onClick="btn_uploadActivity"
-        android:src="@drawable/ic_baseline_shopping_cart_24" />
+        android:src="@drawable/ic_baseline_shopping_cart_24" />-->
 
 
 </RelativeLayout>

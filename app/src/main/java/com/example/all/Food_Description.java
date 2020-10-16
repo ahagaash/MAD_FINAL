@@ -117,6 +117,7 @@ public class Food_Description extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                                         if(task.isSuccessful()){
                                             Toast.makeText(Food_Description.this, "added to cart", Toast.LENGTH_SHORT).show();
+                                            startActivity(new Intent(Food_Description.this,OrderConfirmation.class));
                                         }
                     }
                 });

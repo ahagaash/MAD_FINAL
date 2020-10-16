@@ -27,6 +27,11 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Food_Description" />
         <activity android:name=".ProductPage" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
        </activity>
         <activity android:name=".UpdateFoodActivity" />
         <activity android:name=".Upload_Food" />
@@ -52,11 +57,7 @@
         <activity android:name=".AdminLoginPage"></activity>
         <activity android:name=".AdminHome">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".AssignOrder" />
         <activity android:name=".feedbackUpdate" />

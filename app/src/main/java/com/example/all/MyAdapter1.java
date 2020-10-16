@@ -52,7 +52,7 @@ public class MyAdapter1 extends RecyclerView.Adapter<FoodViewHolder>{
         holder.mDescription.setText(myFoodList.get(i).getItemDescription());
         holder.mPrice.setText(myFoodList.get(i).getItemprice());
 
-
+//value passing to description page when we clicking any food
         holder.mCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -113,7 +113,7 @@ public class ProductPage extends AppCompatActivity {
 
     public void btn_uploadActivity(View view) {
 
-        startActivity(new Intent(this,CartPage.class));
+        startActivity(new Intent(this,OrderConfirmation.class));
     }
 
 
