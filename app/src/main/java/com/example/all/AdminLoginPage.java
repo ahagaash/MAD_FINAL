@@ -62,7 +62,7 @@ public class AdminLoginPage extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
 
-                            startActivity(new Intent(getApplicationContext(),ProfilePage.class));
+                            startActivity(new Intent(getApplicationContext(),AdminHome.class));
                             Toast.makeText(getApplicationContext(), "login successful", Toast.LENGTH_SHORT).show();
 
                         }
